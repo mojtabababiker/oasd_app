@@ -1,0 +1,258 @@
+
+.card-container
+    position: relative
+    width: 100%
+    max-width: 312px
+    padding: 0.666rem
+    // padding-top: 2.444rem
+    margin: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    border: none
+    border-radius: 12px
+    box-shadow: 0 0 12px 0 rgba(0,0,0,0.1)
+    background: $bg-end
+    transition: all 0.5s ease-out
+
+    .card-image
+        width: clamp(80px, 100%, 120px)
+        height: clamp(80px, 100%, 120px)
+        padding: 10px
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translate(-50%, -50%)
+
+        img
+            width: clamp(80px, 70%, 120px)
+            height: clamp(80px, 70%, 120px)
+            object-fit: cover
+            object-position: center
+
+    .card-body
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 0
+        margin: 0
+        margin-top: 2.444rem
+        // padding-top: 1.444rem
+
+//==============================================================
+//                         Team Cards
+//==============================================================
+
+.card-thumbnail
+    overflow: hidden
+    height: clamp(320px, 23rem, 360px)
+
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center center
+        border: none
+        border-top-left-radius: 6px
+        border-top-right-radius: 6px
+
+.card-footer
+    display: flex
+    width: 100%
+    justify-self: flex-end
+
+    ul
+        width: 100%
+        padding: 0
+        margin: 0
+        display: flex
+        gap: 1.1rem
+        align-items: center
+        justify-content: center
+        list-style: none
+
+        li
+            display: inline-block
+            height: 1.222rem
+            cursor: pointer
+
+            &:hover
+                color: $primary-color
+
+            *
+                height: inherit
+                color: inherit
+
+//==============================================================
+//                         Post Cards
+//==============================================================
+.post-card-container
+    // height: fit-content
+    height: 460px
+    // overflow: visible
+    background: #fff
+    cursor: pointer
+    transition: all 0.1s
+    // gap: 3.1rem
+
+    &:hover, &:active
+        overflow: hidden
+        padding-top: 4rem
+
+        .post-thumbnail
+            overflow: clip
+            top: 0
+            left: 0
+            bottom: 30%
+            transform: translate(0, 0)
+            height: auto
+            opacity: 0.3
+
+        .sub-title
+            color: #000
+
+        .post-title
+            // color:
+
+        .post-card-link-container
+            transform: translateY(100%)
+            z-index: 30
+
+    .post-thumbnail
+        width: clamp(80px, 100%, 430px)
+        height: clamp(80px, 100%, 120px)
+        padding: 10px
+        overflow: hidden
+        border-radius: 12px
+        z-index: 2
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translate(-50%, -50%)
+        background-color: #000000ba
+        // background-blend-mode: overlay
+        // backdrop-filter: brightness(0.5)
+        transition: all ease-in-out 1s
+
+        img
+            // width: clamp(80px, 70%, 120px)
+            // height: clamp(80px, 70%, 120px)
+            object-fit: contain
+            object-position: center
+
+        // &:hover, &:active
+        //     transform: translate(0, 0)
+        //     top: 0
+        //     left: 0
+        //     bottom: 0
+        //     height: auto
+
+    .post-card-link-container
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        transform: translateY(-100%)
+        display: flex
+        justify-content: center
+        transition: transform 0.5s ease-in-out
+        transition-delay: 0.5s
+        opacity: 0.9
+        .btn-base
+            padding-inline: 3rem
+            color: #fff
+            background: $primary-color-dark
+            opacity: 1
+
+    .post-card-body
+        height: 100%
+        display: flex
+        flex-direction: column
+        padding-top: 3rem
+        z-index: 3
+        // overflow: hidden
+
+        .post-title
+
+            .primary-title
+                max-height: 172.8px
+                overflow: hidden
+                text-wrap: balance
+
+        .post-summary
+            height: fit-content
+            min-height: 180px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            // padding-top: 1.1rem
+
+            @media screen and ( max-width: 440px )
+                justify-content: flex-start
+                padding-top: 0.6rem
+
+    .sub-title
+        font-size: 0.788rem
+
+    .post-title
+        .primary-title
+            font-size: 3rem
+
+    .post-category-tag
+        position: absolute
+        top: 8px
+        display: flex
+        align-items: center
+        justify-content: center
+        width: fit-content
+        border: none
+        border-radius: 8px
+        padding: 4px
+        padding-inline: 12px
+        font-size: 0.7rem
+        font-weight: 400
+
+    .culture-tag
+        background-color: $culture-color
+        color: #fff
+
+        *
+            color: #fff
+
+    .education-tag
+        background-color: $education-color
+        color: #fff
+
+    .health-care-tag
+        background-color: $health-color
+        color: #fff
+
+    .crisis-tag
+        background-color: $crisis-color
+        color: #fff
+
+//==============================================================
+//                      FEATURED POST CARDS
+//==============================================================
+.featured-post-container
+    overflow: hidden
+    padding-top: 4rem
+    height: fit-content
+
+    .post-thumbnail
+        overflow: clip
+        top: 0
+        left: 0
+        bottom: 30%
+        transform: translate(0, 0)
+        height: auto
+        opacity: 0.3
+
+    &:hover, &:active

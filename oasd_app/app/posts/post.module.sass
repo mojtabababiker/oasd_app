@@ -1,0 +1,246 @@
+@import ./[slug]/slug.module
+::-webkit-scrollbar
+  width: 0px
+  background: transparent
+
+.featured-posts
+  width: 100%
+  padding-top: 1.777rem
+  display: flex
+  flex-direction: column
+  align-items: center
+  background-image: url('/images/header_bg.png')
+
+  .featured-posts-container
+    position: relative
+    display: flex
+    align-items: center
+    height: fit-content
+    min-height: 360px
+    // padding-block: 1.1rem
+
+    @media screen and ( max-width: 1024px )
+      padding-inline: 1.1rem
+
+    @media screen and ( max-width: 768px )
+      padding-inline: 0rem
+
+    // @media screen and ( max-width: 440px )
+      // padding-inline: 0
+
+    button
+      position: absolute
+      z-index: 40
+      max-width: unset
+      width: 60px
+      height: 60px
+      padding-block: 12px
+      padding-inline: 12px
+      border: none
+      border-radius: 50%
+      background-color: #fff
+      top: 50%
+      transform: translatey(-50%)
+
+      display: flex
+      align-items: center
+      justify-content: center
+
+      @media screen and ( max-width: 680px )
+        width: 40px
+        height: 40px
+
+      .icon
+        max-width: unset
+        width: 20px
+        height: 100%
+        *
+          fill: $primary-color-dark
+
+    .arrow-left
+      left: 0px
+      // transform: translateY(-50%)
+      @media screen and ( max-width: 580px )
+        left: 43%
+        top: 100%
+        transform: translate(0,0)
+        background-color: $primary-color-dark
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+        display: none
+
+      .icon
+        transform: rotate(180deg)
+
+    .arrow-right
+      right: 0px
+
+      @media screen and ( max-width: 580px )
+        display: none
+        right: 43%
+        top: 100%
+        transform: translate(0, 0)
+        background-color: $primary-color-dark
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+
+    .featured-post-arrow-sm
+      display: none
+      align-items: center
+      justify-content: center
+      gap: 1rem
+      padding-inline: 1.1rem
+      padding-block: 0.3rem
+      opacity: 0.7
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translate(-50%, 55%)
+      background-color: $primary-color-dark
+      border: none
+      border-radius: 16px
+
+      button
+        position: relative
+        transform: translateY(0)
+
+      .arrow-left-sm
+        .icon
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          transform: rotate(180deg)
+
+      @media screen and ( max-width: 580px )
+        display: flex
+
+  .posts-menu
+    position: relative
+    max-width: 90%
+    height: fit-content
+    padding: 0
+    padding-top: 2rem
+    display: flex
+
+    flex-wrap: nowrap
+    gap: 1.1rem
+    overflow-x: scroll
+
+    @media screen and ( max-width: 580px )
+      padding-inline: 0rem
+      max-width: unset
+      width: 100%
+
+    @media screen and ( max-width: 375px )
+      padding-inline: 0
+
+  .featured-post-item
+    border: 0.577rem solid $primary-color
+    list-style: none
+    padding: 0
+    margin: 0
+    min-width: 330px
+
+.filter-posts-section
+
+.filter-posts-container
+  .filters-warper
+    display: flex
+    flex-direction: column
+    border-bottom: 1px solid #0000002c
+
+    @media screen and ( max-width: 440px )
+      border: none
+
+    .filters-menu
+      display: flex
+      gap: 1.1rem
+      margin-top: 1.1rem
+      padding: 0
+
+      .filter-item
+        list-style: none
+        display: flex
+
+        button
+          font-size: 0.8777rem
+          // background: transparent
+          background: $primary-color-dark
+          color: #fff
+
+          @media screen and ( max-width: 1024px )
+            font-size: 0.766rem
+
+          @media screen and ( max-width: 768px )
+            font-size: 0.666rem
+
+        .active
+          background: $primary-color
+
+      @media screen and ( max-width: 1024px )
+        justify-content: center
+
+      @media screen and ( max-width: 427px )
+        display: none
+        position: absolute
+        z-index: 40
+        flex-direction: row
+        flex-wrap: wrap
+        gap: 8px
+        align-items: center
+        width: 90%
+        padding: 12px
+        border: none
+        border-radius: 12px
+        background: #fff
+
+        .filter-item
+          // width: 100%
+          justify-content: center
+
+          button
+            width: 100%
+            // max-width: 130px
+
+    .toggle-filter
+      display: none
+      // margin-top: 0.66rem
+      border-color: transparent
+      background: $primary-color-dark
+      border-radius: 50%
+      border-top-left-radius: 0
+      // border-bottom-left-radius: 60%
+
+      position: absolute
+      left: -10px
+
+      .filter-icon *
+        fill: #dddddd
+
+      @media screen and ( max-width: 322px )
+        width: 32px
+        height: 32px
+        padding: 0
+        padding-left: 3px
+
+        .filter-icon
+          width: 30px
+          // height: 28px
+
+      @media screen and ( max-width: 427px )
+        display: block
+
+//==========================================================
+//                   POST CONTAINER SECTION
+//==========================================================
+.posts-container
+  padding-top: 4rem
+  margin-top: 2rem
+
+  @media screen and ( max-width: 375px )
+    padding-top: 4.66rem
+    margin-top: 2.77rem
+
+  .posts-warper
+    position: relative
+    top: -100px

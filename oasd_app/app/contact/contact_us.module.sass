@@ -1,0 +1,111 @@
+.contact-us-main
+  gap: 0px
+
+  .contact-us-warper
+    position: relative
+    padding: 0
+    padding-block: 4rem
+    margin: 0
+    background: $primary-color-dark
+    border: 4rem solid $bg-end
+
+    .section
+      @media screen and ( max-width: 440px )
+        align-items: center
+
+  .contact-us-container
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 1.1rem
+
+    .text-warper
+      .sub-title
+        color: #ededed
+      .main-title
+        color: #fffffff4
+        box-shadow: inset 0px -2.333rem 0px -0.28rem rgba(255, 196, 0, 0.884)
+        width: fit-content
+
+  .contact-us-list
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    gap: 1.1rem
+    padding: 0
+
+    .contact-us-item
+      width: 100%
+      max-width: 350px
+      min-width: 220px
+      padding: 1.1rem
+      margin: 0
+      list-style: none
+      border: none
+      border-radius: 12px
+      // box-shadow: 0 0 12px 0 rgba(0,0,0,0.1)
+      display: flex
+      flex-direction: column
+      align-items: center
+      // gap: 1.1rem
+
+      .sub-title
+        display: flex
+        align-items: center
+        text-align: center
+        opacity: 0
+        background-color: #fff
+        width: 225px
+        height: 100px
+        padding: 1.1rem
+        border-radius: 16px
+        border-top-left-radius: 0
+        border-top-right-radius: 0
+
+        a
+          text-decoration: none
+          text-align: center
+          color: inherit
+          // color: #fff
+
+      img
+        background: #fff
+        box-shadow: 0 0 12px 0 rgba(0,0,0,0.1)
+        border: none
+        border-radius: 16px
+
+  .contacts-us-warper
+    @media screen and ( max-width: 440px )
+
+      min-width: 100vw
+      padding-inline: 1.1rem
+      margin: 0
+      .section
+        margin: 0
+
+.map-container
+  display: flex
+
+  flex-direction: column
+  justify-content: center
+  background: $bg-end
+
+  .main-title
+    box-shadow: inset 0px -2.333rem 0px -0.28rem rgba(255, 196, 0, 0.884)
+    width: fit-content
+
+.map
+  width: 100%
+  overflow: hidden
+  position: relative
+  padding-bottom: 57.5%
+  border-radius: 16px
+  box-shadow: 0px 0px 38px -3px #00000021
+
+  iframe
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%

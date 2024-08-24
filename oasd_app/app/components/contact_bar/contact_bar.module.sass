@@ -1,0 +1,52 @@
+.contact-warper
+    border-bottom: 1px solid #00000021
+    width: 100%
+    max-width: 1280px
+
+.icon
+    width: 100%
+    max-width: 8px
+    margin-right: 4px
+
+    &:hover
+        *
+            fill: $primary-color
+
+.contacts-bar
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    align-items: space-between
+    justify-content: center
+    font-weight: normal
+    width: 100%
+
+.contacts
+    width: 100%
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    flex-direction: row
+    margin: 0
+    gap: 15px
+    row-gap: 5px
+    transition: all 1s ease-in-out
+    font-size: 0.6rem
+
+.contacts-right
+    justify-self: end
+    justify-content: end
+    flex-wrap: nowrap
+
+.contact-item
+    // display: inline-block
+    list-style: none
+
+.contact-link
+    text-decoration: none
+    color: #424155
+
+    transition: all 0.25 ease-in-out
+
+    &:hover
+        color: $primary-color

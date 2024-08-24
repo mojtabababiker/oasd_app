@@ -1,0 +1,194 @@
+//===============================================================
+//                         ANIMATIONS CLASS
+//===============================================================
+
+// preloaders animation
+// .loading-text
+//     span
+//         animation: moveLetters 2.4s infinite ease-in-out
+
+.floating-items
+    animation: floating 2s ease-in-out infinite alternate
+
+.image-sliding
+    animation: sliding 32s ease-in-out none infinite
+
+.slider-container
+    animation: carousel 4s linear infinite
+
+.letter-slide
+    animation: slide-to 3s ease-in-out alternate forwards
+    // animation: name duration timing-function delay iteration-count direction fill-mode
+    animation-delay: 1s
+    opacity: 0
+    transition: transform ease-in-out
+
+// values animate
+.from-active-to-prev
+    animation: to_prev 0.5s ease-in 0s normal forwards
+    animation-delay: 0s
+.from-next-to-active
+    animation: to_active 0.8s ease-in 0s normal forwards
+    // animation-delay: 0.3s
+.from-hidden-to-next
+    animation: to_next 1.2s ease-in 0s normal forwards
+    // animation-delay: 0.6s
+
+.fadein
+    opacity: 1
+    // animation: fade_in 1s ease-in 3s forwards
+
+.fadeout
+    opacity: 0
+    // animation: fade_in 1s ease-out 3s forwards reverse
+
+// filter menu animation
+.scale_in
+    animation: scale 0.5s ease-in-out normal forwards
+    display: flex !important
+
+.scale_out
+    animation: scale 0.5s ease-in-out reverse reverse
+    // display: none
+
+//===============================================================
+//                         KEYFRAMES
+//===============================================================
+@keyframes floating
+    0%
+        transform: translateY(0)
+    100%
+        transform: translateY(-1rem)
+
+@keyframes sliding
+    0%
+        transform: translateX(0)
+    20%
+        transform: translateX(-100%)
+    40%
+        transform: translateX(-200%)
+    60%
+        transform: translateX(-300%)
+    80%
+        transform: translateX(-400%)
+    100%
+        transform: translateX(-500%)
+
+@keyframes carousel
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(-50%)
+
+@keyframes slide-to
+    0%
+        // transform: translateX(-10000px)
+        opacity: 0
+
+    100%
+        // transform: translateX(0)
+        opacity: 1
+
+@keyframes to_prev
+
+    0%
+        transform: scale(1)
+        top: 50%
+        transform: translateY(-50%)
+        padding: 1rem
+        background: $bg-end
+    100%
+        top: 16px
+        transform: translateY(0)
+        transform: scale(0.7)
+
+@keyframes to_active
+    0%
+        bottom: 16px
+        transform: translateY(0)
+        transform: scale(0.7)
+
+    100%
+        transform: scale(1)
+        bottom: 50%
+        transform: translateY(50%)
+        padding: 1rem
+        background: $bg-end
+
+@keyframes to_next
+    0%
+        bottom: 0px
+        transform: scale(0)
+        // transform: translateY(-100%)
+        opacity: 0
+
+    100%
+        bottom: 16px
+        transform: scale(0.7)
+        opacity: 1
+
+@keyframes fade_in
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+        // display: none
+
+@keyframes scale
+    0%
+        transform: scale(0.00)
+        transform: translateX(-30%)
+        transform: translateY(-20%)
+
+        opacity: 0
+
+    100%
+        transform: scale(1)
+        transform: translateX(0)
+        transform: translateY(0)
+        opacity: 1
+
+// preloaders keyframse
+
+@keyframes movingLine
+    0%
+        opacity: 0
+        width: 0
+
+    33.3%, 66% 
+        opacity: 0.8
+        width: 100%
+
+    85%
+        width: 0
+        left: initial
+        right: 0
+        opacity: 1
+
+    100%
+        opacity: 0
+        width: 0
+
+@keyframes moveLetters
+    0%
+        transform: translateX(-15vw)
+        opacity: 0
+
+    33.3%, 66% 
+        transform: translateX(0)
+        opacity: 1
+
+    100%
+        transform: translateX(15vw)
+        opacity: 0
+
+// breadcrumb keyframe
+
+@keyframes toPlaces
+    0%
+        width: 100vw
+        height: 100vh
+
+    100%
+        width: 100%
+        height: auto

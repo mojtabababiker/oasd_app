@@ -1,0 +1,215 @@
+@import './utils/styles/variables'
+@import './utils/styles/animations'
+@import 'normalize.css/normalize.css'
+@import './components/about-us-hero/about_us_hero.module'
+@import './components/buttons/buttons.module'
+@import './components/breadcrumb/breadcrumb.module'
+@import './components/cards/cards.module'
+@import './components/contact_bar/contact_bar.module'
+@import './components/footer/footer.module'
+@import './components/forms/forms.module'
+@import './components/sliding-mession/sliding-mission.module'
+@import './components/navbar/navbar.module'
+@import './components/partners/partners.module'
+
+@import './page.module'
+@import './about/about.module'
+@import './contact/contact_us.module'
+@import './posts/post.module'
+
+*, *::before, *::after
+    box-sizing: border-box
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+
+body, body::before, body::after, body *
+    margin: 0
+    padding: 0
+    font-family: var(--roboto-serif), sans-serif
+    color: $font-color-primary
+
+body
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    overflow-x: hidden
+    font-family: var(--roboto-mono), monospace
+    font-weight: 400
+    font-size: 1rem
+    line-height: 1.2rem
+    color: #424155
+    background-color: #fff
+
+    main
+        width: 100vw
+        padding: 0
+        margin: 0
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 1.111rem
+
+        .section
+            margin-top: 4rem
+            // max-width: 1280px
+            // display: flex
+            // align-items: center
+            // // just
+
+        .section-md
+            width: 100%
+            max-width: 1280px
+            display: flex
+            flex-direction: column
+
+//====================================================
+//                      Typography
+//====================================================
+
+h1, h2, h3, h4, h5, h6
+    font-family: var(--roboto-serif), sans-serif
+    font-weight: 400
+    font-size: 1.2rem
+
+h1, h2
+    font-weight: 600
+    line-height: 1.1rem
+
+h1
+    font-size: 2rem
+    font-weight: 800
+
+.main-title
+    padding: 0
+    margin: 0
+    font-size: 2.888rem
+    font-weight: clamp(400, 600, 800)
+
+    @media ( max-width: 960px )
+        font-size: 2.666rem
+
+    @media ( max-width: 740px )
+        font-size: 2.222rem
+
+    @media ( max-width: 340px )
+        font-size: 1.222rem
+        // margin-top: 2.888rem
+
+.sub-title
+    color: #5f5e6d
+    background-image: url('/static/images/headlines_bg.png')
+    background-size: contain
+    background-repeat: repeat-x
+    background-position-y: bottom
+    font-size: 1.22rem
+    font-weight: 400
+    line-height: 1.5rem
+
+    @media ( max-width: 460px )
+        font-size: 0.8rem
+
+.primary-title
+    // font-weight: bold
+    padding: 0
+    margin: 0
+    font-size: 3.888rem
+    font-weight: clamp(400, 700, 800)
+
+    span
+        font-weight: 600
+        font-size: 2.88rem
+        text-transform: uppercase
+        box-shadow: inset 0px -1.333rem 0px -0.28rem rgba(255, 196, 0, 0.884)
+
+    @media ( max-width: 460px )
+        font-size: 2.888rem
+        font-weight: 600
+
+        span
+            font-size: 2.222rem
+            font-weight: 400
+
+.secondary-title
+    color: #5f5e6d
+    // width: max-content
+    // text-align: center
+    // padding: 15px
+    line-height: 2.5rem
+
+.secondry-p
+    line-height: 1.5rem
+    font-size: 1.22rem
+
+    span
+        color: #5f5e6d
+
+//========================================================
+//                      Preloaders
+//========================================================
+.loading-section
+    width: 100vw
+    height: 100vh
+    padding: 0
+    margin: 0
+    position: relative
+    z-index: 100
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #1313137c
+    background-blend-mode: overlay
+    background-position: center
+    background-size: cover
+    transition: all ease-in-out 1s
+
+.loading-section-home
+    background-image: url('/images/header_bg.png')
+.loading-section-about
+    background-image: url('/images/about_us_bg.png')
+.loading-section-contact
+    background-image: url('/images/contact_us_bg.png')
+
+.loading-section-causes
+    background-image: url('/images/common_header.png')
+
+.loading-container
+    width: 100%
+    max-width: 520px
+    text-align: center
+    color: #fff
+    position: relative
+    margin: 0 32px
+
+    &:before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 3px
+        background-color: rgba(255, 196, 0, 0.884)
+        bottom: 0
+        left: 0
+        border-radius: 10px
+        animation: movingLine 2.4s infinite ease-in-out
+
+    .loading-text
+        font-size: 5vw
+        line-height: 64px
+        letter-spacing: 10px
+        margin-bottom: 32px
+        display: flex
+        justify-content: space-evenly
+        color: #fff
+        span
+            animation: moveLetters 2.4s infinite ease-in-out
+            transform: translatex(0)
+            position: relative
+            display: inline-block
+            opacity: 0
+            color: inherit
+            text-shadow: 0px 2px 10px rgba(46, 74, 81, 0.3)
+
+    @for $i from 1 through 7
+        .loading-text span:nth-child(#{$i})
+            animation-delay: $i * 0.1s

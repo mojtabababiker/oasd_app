@@ -1,0 +1,101 @@
+.footer-container
+  position: relative
+  width: 100%
+  // max-width: 1280px
+  background-color: $bg-end
+  padding-top: 8rem
+  margin-top: 4rem
+  display: flex
+  align-items: center
+  justify-content: center
+
+  .footer-warper
+    width: 100%
+    padding-bottom: 4rem
+    display: flex
+    flex-wrap: wrap
+    // justify-content: space-between
+    gap: 2rem
+
+    .footer-brief-container
+      width: clamp(360px, 100%, 420px)
+
+    .footer-brief
+      width: 100%
+      padding: 0
+      margin: 0
+
+      .secondary-p
+        opacity: 0.90
+        font-size: 0.8rem
+
+  .contacts
+    margin: 0
+    padding: 0
+    justify-content: flex-start
+    align-items: flex-start
+
+  .quick-links
+    display: flex
+    flex-direction: column
+
+    ul
+      display: flex
+      flex-direction: column
+      gap: 1.2rem
+      padding: 0
+      margin: 0
+
+    li
+      list-style: none
+      padding: 0
+      margin: 0
+
+    a
+      text-decoration: none
+
+    .secondary-title
+      font-size: 1.333rem
+
+    .sub-title
+      font-size: 1rem
+
+  .contact-us-form-container
+    // width: clamp(320px, 50%, 620px)
+    flex-grow: 1
+
+  .copy-rights
+    width: 100%
+    position: absolute
+    bottom: 0
+    display: flex
+    align-items: center
+    background: $primary-color
+    color: $bg-start
+
+    p
+      font-size: 0.7rem
+      color: $bg-end
+
+    .contacts-right
+      align-items: center
+
+      gap: 4px
+      color: $bg-start
+
+      .icon
+        *
+          color: $bg-start
+
+  @media screen and ( max-width: 986px )
+    align-items: center
+    .contact-us-form-container
+      width: 100%
+
+  @media screen and ( max-width: 660px )
+    align-items: center
+    .footer-warper
+      .footer-brief-container
+        width: 100%
+      .contact-us-form-container
+        width: 60%

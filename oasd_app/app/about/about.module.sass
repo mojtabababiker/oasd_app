@@ -1,0 +1,362 @@
+main
+  .section
+    margin-top: 4rem
+    // max-width: 1280px
+    // display: flex
+    // align-items: center
+    // // just
+
+  .brief-content
+    .solid-btn-primary
+      padding-inline: 3rem
+
+  .vision-and-mission-container
+    position: relative
+    display: flex
+    flex-direction: column
+    gap: 4rem
+    align-items: center
+    justify-content: center
+    padding-block: 3rem
+    background-image: url('/images/header_bg.png')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    overflow-x: hidden
+
+    .image-container
+      position: relative
+      left: 20%
+      width: 100%
+      padding-inline: 3rem
+      padding-block: 2rem
+      border: 12px solid $primary-color-dark
+
+    .vision-container
+      width: 100%
+      max-width: 1280px
+      display: flex
+      gap: 1.1rem
+      overflow-y: clip
+
+    .mission-container
+      .image-container
+        left: -20%
+    @media screen and ( max-width: 560px )
+      overflow: clip
+      .image-container
+        position: absolute
+        width: 60%
+        opacity: 0.35
+      .vision-container
+        .image-container
+          left: 60%
+          height: 280px
+
+      .mission-container
+        .image-container
+          left: -20%
+          height: 400px
+
+      .vision-container
+        width: 100%
+
+@media screen and ( max-width: 340px )
+  .secondary-p
+    padding-top: 12px
+    font-size: 0.666rem
+    line-height: 1.1rem
+
+  .solid-btn-primary
+    font-size: 0.7rem
+
+//=============================================================
+//                         SERVICES
+//=============================================================
+
+.services
+  // position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  overflow: hidden
+  padding: 0
+  // justify-content: center
+
+  .hidden
+    opacity: 0
+
+  .visible
+    opacity: 1
+.services-title
+  width: 100%
+  max-width: 1280px
+
+.services-slider
+  position: relative
+  width: 100vw
+  display: flex
+  flex-wrap: nowrap
+  align-items: flex-start
+  justify-content: flex-start
+  overflow: hidden
+  margin-top: 4rem
+  background: #000000a8
+  // base service slide contiainer
+  .slide
+    position: relative
+    z-index: 40
+    min-width: 100%
+    min-height: 100vh
+    display: flex
+    align-items: center
+    flex-direction: column
+    transition: opacity 0.3s ease-in-out
+
+    .text-warper
+      width: 100%
+      max-width: 1280px
+
+      .primary-title
+        // position: relative
+        span
+          font-size: 4rem
+          color: $bg-start
+
+          @media screen and ( max-width: 440px )
+            font-size: 3rem
+            font-weight: 800
+
+      .sub-title
+        width: 100%
+        max-width: 640px
+        // height: auto
+        font-size: 2rem
+        line-height: 2.4rem
+        color: $bg-start
+
+        @media screen and ( max-width: 440px )
+          font-size: 1.6rem
+          line-height: 2rem
+
+  // costumized slider
+
+  .education
+    // display: none
+    background-image: url('/images/gallery/services/ed_1.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    background-blend-mode: overlay
+    background-color: #00000098
+
+    // align-items: center
+    justify-content: center
+
+    .primary-title
+      position: absolute
+      top: 10%
+
+      @media screen and ( max-width: 440px )
+        top: 15%
+        left: 50%
+        transform: translateX(-50%)
+
+    .sub-title
+      position: absolute
+      top: 40%
+
+      @media screen and ( max-width: 440px )
+        top: 40%
+        left: 50%
+        transform: translateX(-50%)
+        text-justify: center
+
+  .health-care
+    background-image: url('/images/gallery/services/health_care.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    background-blend-mode: overlay
+    background-color: #00000098
+
+    // align-items: center
+    justify-content: center
+
+    .primary-title
+      position: absolute
+      top: 10%
+
+      @media screen and ( max-width: 440px )
+        top: 15%
+        left: 50%
+        transform: translateX(-50%)
+
+    .sub-title
+      position: absolute
+      top: 40%
+
+      @media screen and ( max-width: 440px )
+        top: 40%
+        left: 50%
+        transform: translateX(-50%)
+        text-justify: center
+
+  .culture
+    background-image: url('/images/gallery/services/culture.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    background-blend-mode: overlay
+    background-color: #00000098
+
+    // align-items: center
+    justify-content: center
+
+    .primary-title
+      position: absolute
+      top: 10%
+
+      @media screen and ( max-width: 440px )
+        top: 15%
+        left: 50%
+        transform: translateX(-50%)
+
+    .sub-title
+      position: absolute
+      top: 40%
+
+      @media screen and ( max-width: 440px )
+        top: 40%
+        left: 50%
+        transform: translateX(-50%)
+        text-justify: center
+
+  .crisis
+    background-image: url('/images/gallery/services/crisis.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    background-blend-mode: overlay
+    background-color: #00000098
+
+    // align-items: center
+    justify-content: center
+
+    .primary-title
+      position: absolute
+      top: 10%
+
+      @media screen and ( max-width: 440px )
+        top: 15%
+        left: 50%
+        transform: translateX(-50%)
+
+    .sub-title
+      position: absolute
+      top: 40%
+
+      @media screen and ( max-width: 440px )
+        top: 40%
+        left: 50%
+        transform: translateX(-50%)
+        text-justify: center
+
+//=====================================================================
+//                             VALUES SECTION
+//=====================================================================
+.values
+  position: relative
+  width: 100%
+  max-width: 1280px
+  display: flex
+  justify-content: center
+  // align-items: center
+
+  @media screen and ( max-width: 768px )
+    flex-direction: column
+
+  .values-container
+    position: relative
+    width: 100%
+    box-shadow: inset 0px 8px 25px 0.4rem rgba(255, 255, 255, 0.71)
+
+    .values-list
+      // background: #000
+      position: relative
+      width: 100%
+      // height: auto
+      height: 520px
+      padding: 0
+      margin: 0
+      overflow: hidden
+      display: flex
+      flex-direction: column
+      align-items: center
+      // justify-content: center
+      transition: all 1s ease-in-out
+
+      @media screen and ( max-width: 460px )
+        max-height: 280px
+
+      .value-item
+        position: absolute
+        display: flex
+        align-items: center
+        gap: 4rem
+        width: 100%
+        max-width: 960px
+
+        @media screen and ( max-width: 460px )
+          justify-content: flex-start
+          gap: 10px
+
+          .main-title
+            width: 100%
+            font-size: 1.555rem
+            text-align: center
+
+        .main-title
+          width: 100%
+          // text-align: center
+
+        img
+          width: clamp(80px, 100%, 160px)
+          height: auto
+
+          @media screen and ( max-width: 460px )
+            width: 60px
+            height: auto
+
+      .next, .prev
+        width: 100%
+        // transform: scale(0.7)
+        background: transparent
+        padding: 0
+        img
+          width: clamp(80px, 100%, 160px)
+          height: auto
+          @media screen and ( max-width: 460px )
+            width: 60px
+            height: auto
+
+        .main-title
+          text-align: rigth
+          // width: 100%
+
+      .next
+        // bottom: 16px
+        // left: 16px
+
+      // .prev
+      //   top: 16px
+      //   // left: 16px
+
+      .active
+        // width: 100%
+        // max-width: 960px
+        // padding: 1rem
+        // background: $bg-end
+        // left: 
+        // top: 50%
+        // transform: translateY(-50%)

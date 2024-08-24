@@ -1,0 +1,78 @@
+.causes-bg
+  background-color: #3838389f
+  background-blend-mode: overlay
+
+.post-main
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  gap: 1.1rem
+  row-gap: 4rem
+  max-width: 1280px
+
+  .post-article
+    max-width: 65%
+    padding: 0
+    margin: 0
+    display: flex
+    flex-direction: column
+    gap: 1.1rem
+
+    @media screen and ( max-width: 920px )
+      max-width: unset
+      width: 100%
+      align-items: center
+      justify-content: center
+
+    .post-meta
+      padding: 0
+      margin: 0
+      display: flex
+      gap: 0.777rem
+      .sub-title
+        font-size: 0.6rem
+        font-weight: 600
+
+  .related-posts-aside
+    position: sticky
+    top: 0rem
+    right: 0
+    width: 30%
+    height: auto
+    padding: 1.1rem
+
+    border-radius: 16px
+    background-image: url('/images/header_bg.png')
+
+    @media screen and ( max-width: 920px )
+      position: relative
+      width: 100%
+
+    .related-posts-warper
+      display: flex
+      flex-direction: column
+      gap: 1.1rem
+      padding: 0
+
+      margin: 0
+      margin-block: 1.1rem
+
+      @media screen and ( max-width: 920px )
+        flex-direction: row
+
+      .featured-post-item
+        list-style: none
+        padding: 0
+        margin: 0
+
+        .featured-post-container
+          transform: scale(0.7)
+
+          @media screen and ( max-width: 1024px )
+            transform: scale(1)
+
+          @media screen and ( max-width: 920px )
+            transform: scale(0.8)
+
+          @media screen and ( max-width: 322px )
+            transform: scale(0.9)

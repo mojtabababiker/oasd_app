@@ -1,0 +1,64 @@
+
+.mission
+    .brief-img
+        padding: 0.665rem
+        border: none
+        border-radius: 16px
+        box-shadow: 0 0 12px 0 rgba(0,0,0,0.1)
+
+        h3
+            padding-top: 2rem
+            font-size: 1.777rem
+            font-weight: 600
+
+        @media screen and ( max-width: 420px )
+            h3
+                font-size: 1.1rem
+            p
+                font-size: 0.8rem
+
+    @media screen and ( max-width: 768px )
+        .solid-btn-primary
+            align-self: center
+
+.slider
+    overflow-x: hidden
+    display: flex
+    width: 100%
+
+    img
+        aspect-ratio: 16/9
+        width: 100%
+        height: auto
+        object-fit: cover
+
+.focus-item
+    width: 100%
+    display: flex
+    gap: 1.333rem
+
+    @media screen and ( max-width: 460px )
+        flex-wrap: wrap
+        justify-content: center
+
+        .focus-item-content
+            width: 100%
+            background: $bg-start
+            padding: 0.8rem
+
+            &:last-child
+                margin-bottom: 3rem
+
+    img
+        // aspect-ratio: 1/1
+        width: auto
+        height: 100%
+        max-height: 80px
+    .focus-item-content
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+
+.titles
+    .main-title
+        max-width: 640px

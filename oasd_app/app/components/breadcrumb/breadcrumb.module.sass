@@ -1,0 +1,63 @@
+//==================================================================
+//                        BACKGROUND CLASSES
+//==================================================================
+.causes-bg
+  background-image: url('/images/common_header.png')
+
+.about-bg
+  background-image: url('/images/about_us_bg.png')
+  background-position: right center !important
+.contact-us-bg
+  background-image: url('/images/contact_us_bg.png')
+
+//==================================================================
+//                         BREADCRUMB CONTAINER
+//==================================================================
+.breadcrumb-animate
+  animation: toPlace 0.7s ease-in forwards
+.breadcrumb-container
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0
+  margin: 0
+  width: 100%
+  min-height: 374px
+  background-position: center
+  background-size: cover
+  //
+
+  .header-title-container
+    width: 100%
+    max-width: 1280px
+    padding: 0
+    margin: 0
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    gap: 0.6rem
+    color: $bg-start
+
+    .primary-title
+      width: fit-content
+      box-shadow: inset 0px -18px 0px -5px rgba(255, 196, 0, 0.884)
+
+    .breadcrumb
+      display: flex
+      gap: 8px
+      align-items: center
+
+      li
+        padding: 0
+        margin: 0
+        display: flex
+        align-items: center
+        gap: 8px
+        color: $bg-start
+
+        .breadcrumb-icon *
+          color: $bg-start
+
+        a
+          text-decoration: none
+          color: $bg-end
