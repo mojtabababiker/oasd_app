@@ -1,4 +1,4 @@
-// 'use client';
+'use client';
 import Image from "next/image";
 import BreadCrumb from "@/app/components/breadcrumb/breadcrumb";
 import { PostCardParams } from "@/app/utils/interfaces/interfaces";
@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { FeaturedPostCard } from "@/app/components/cards/cards";
 import { Button } from "@/app/components/buttons/buttons";
 import { SolidIcons } from "@/app/components/icons/icons";
+import { InView } from "react-intersection-observer";
 
 
 export default async function PostPage(params: { params: { slug: string }, searchParams: { string: any } }) {
@@ -68,9 +69,14 @@ export default async function PostPage(params: { params: { slug: string }, searc
             <ul className="related-posts-warper">
               {relatedPosts.map((post, index) => {
                 return (
-                  <li className="featured-post-item" key={index}>
+                  // <li className="featured-post-item" key={index}>
+                  //   <FeaturedPostCard {...post} />
+                  // </li>
+                  <InView as="li" className={`featured-post-item delay-${(index + 1) * 150}`} threshold={0.25} key={index} onChange={(inView, entry) =>
+                    inView && entry.target.classList.add('slide-bottom')
+                  }>
                     <FeaturedPostCard {...post} />
-                  </li>
+                  </InView>
                 )
               })}
             </ul>

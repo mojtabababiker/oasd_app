@@ -75,10 +75,8 @@ export default function Home() {
       {/* hero */}
       <div className="container-fluid header-container">
         <div className="header-warper">
-          <InView as="div" className="col-12 col-md-6 header-title-col opicity-0" threshold={1} onChange={(inView, entry) => {
-            console.log(`The ${entry.target.classList} is ${inView} visible`);
-            inView && entry.target.classList.add('slide-left');
-          }
+          <InView as="div" className="col-12 col-md-6 header-title-col" threshold={1} onChange={(inView, entry) =>
+            inView && entry.target.classList.add('slide-left')
           }>
             <h1 className="primary-title">
               We're on a mission to <span className="primary-title">change</span>
@@ -138,9 +136,12 @@ export default function Home() {
           <div className="cards-warper">
             <ul className="posts-warper section">
               {posts.map((post, index) =>
-                <li className="post-item" key={index}>
+                <InView as="li" className={`post-item delay-${(index + 1) * 250}`} threshold={0.25} key={index} onChange={(inView, entry) =>
+                  inView && entry.target.classList.add('slide-bottom')
+                }>
                   <PostCard {...post} />
-                </li>)}
+                </InView>
+              )}
             </ul>
           </div>
         </div>
@@ -156,7 +157,7 @@ export default function Home() {
           <h4 className="sub-title">Our Team</h4>
           <h1 className="main-title">The Faces Behind Our Success</h1>
           {/*team cards */}
-          <div className="cards-warper">
+          <div className="cards-warper team-card-warper">
 
             <TeamCard name="Dr.Suad Abdalla" thumbnail="director_2" >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ipsam quasi.

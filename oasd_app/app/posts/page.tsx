@@ -6,6 +6,7 @@ import { PostCardParams } from "../utils/interfaces/interfaces";
 import { Button } from "../components/buttons/buttons";
 import { SolidIcons } from "../components/icons/icons";
 import NavBar from "../components/navbar/navbar";
+import { InView } from "react-intersection-observer";
 
 
 const featuredPost: PostCardParams[] = [
@@ -273,9 +274,15 @@ export default function Posts() {
           <div className="cards-warper">
             <ul className="posts-warper">
               {posts.map((post, index) =>
-                <li className="post-item" key={index}>
+                // <li className="post-item" key={index}>
+                //   <PostCard {...post} />
+                // </li>
+                <InView as="li" className={`post-item delay-${(index + 1) * 150}`} threshold={0.25} key={index} onChange={(inView, entry) =>
+                  inView && entry.target.classList.add('slide-bottom')
+                }>
                   <PostCard {...post} />
-                </li>)}
+                </InView>
+              )}
             </ul>
           </div>
         </div>
