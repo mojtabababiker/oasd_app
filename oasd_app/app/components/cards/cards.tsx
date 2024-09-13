@@ -4,11 +4,15 @@ import Link from "next/link";
 import { Button } from "@/app/components/buttons/buttons";
 import { BrandIcons } from "@/app/components/icons/icons";
 import { ProgramCardParam, TeamCardParam, PostCardParams, FeaturedPostParam } from "@/app/utils/interfaces/interfaces";
+import { InView } from "react-intersection-observer";
 
 
 export function ProgramCard(param: ProgramCardParam) {
     return (
-        <div className="card-container">
+        <InView as="div" className="card-container" threshold={1}
+            onChange={(inView, entry) =>
+                inView && entry.target.classList.add('slide-top')
+            }>
             <div className="card-image">
                 <Image src={param.icon} alt={param.title} width={200} height={200} />
             </div>
@@ -17,7 +21,17 @@ export function ProgramCard(param: ProgramCardParam) {
                 <p className="secondary-p">{param.children}</p>
                 <Button href={param.link}>Learn More</Button>
             </div>
-        </div>
+        </InView >
+        // <div className="card-container">
+        //     <div className="card-image">
+        //         <Image src={param.icon} alt={param.title} width={200} height={200} />
+        //     </div>
+        //     <div className="card-body">
+        //         <h2 className="">{param.title}</h2>
+        //         <p className="secondary-p">{param.children}</p>
+        //         <Button href={param.link}>Learn More</Button>
+        //     </div>
+        // </div>
     )
 }
 

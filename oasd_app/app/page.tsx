@@ -1,6 +1,7 @@
+'use client';
 // import styles from "./page.module.sass";
 import React from "react";
-// import {useInView} from 'rea'
+import { InView, useInView } from 'react-intersection-observer';
 import { SolidIcons } from "@/app/components/icons/icons";
 import { Button } from "./components/buttons/buttons";
 import { ProgramCard, TeamCard, PostCard } from "./components/cards/cards";
@@ -74,7 +75,11 @@ export default function Home() {
       {/* hero */}
       <div className="container-fluid header-container">
         <div className="header-warper">
-          <div className="col-12 col-md-6 header-title-col">
+          <InView as="div" className="col-12 col-md-6 header-title-col opicity-0" threshold={1} onChange={(inView, entry) => {
+            console.log(`The ${entry.target.classList} is ${inView} visible`);
+            inView && entry.target.classList.add('slide-left');
+          }
+          }>
             <h1 className="primary-title">
               We're on a mission to <span className="primary-title">change</span>
             </h1>
@@ -86,8 +91,13 @@ export default function Home() {
               <Button href="/donate" className="solid-btn-primary">Join the Movement</Button>
               <Button href="/join" className="outline-btn">Learn More</Button>
             </div>
-          </div>
-          <div className="col-md-6 header-side-image">
+          </InView>
+          <InView as="div" className="col-md-6 header-side-image" threshold={1}
+            onChange={(inView, entry) => {
+              console.log(`The ${entry.target} is 
+            ${inView} visble`);
+              inView && entry.target.classList.add('slide-right');
+            }}>
             <div className="floating-items floating-icon-container">
               <SolidIcons icon="hand-heart" className="floating-icon" />
             </div>
@@ -102,7 +112,7 @@ export default function Home() {
             <div className="floating-items floating-icon-container">
               <SolidIcons icon="baby" className="floating-icon" />
             </div>
-          </div>
+          </InView>
         </div>
       </div >
       {/* articles catagories cards */}
