@@ -169,15 +169,15 @@ export default function AboutUsPage() {
         <div className="values-container">
           <ul className="values-list">
             <li key={prevValue.id} className="value-item prev from-active-to-prev">
-              <Image src={`/images/gallery/values/${prevValue.icon}`} alt={`${prevValue.title} GIF image`} width={460} height={460} />
+              <Image src={`/images/gallery/values/${prevValue.icon}`} alt={`${prevValue.title} GIF image`} width={460} height={460} unoptimized={true}/>
               <h3 className="main-title">{prevValue.title}</h3>
             </li>
             <li key={currentValue.id} className="value-item active from-next-to-active">
-              <Image src={`/images/gallery/values/${currentValue.icon}`} alt={`${currentValue.title} GIF image`} width={460} height={460} />
+              <Image src={`/images/gallery/values/${currentValue.icon}`} alt={`${currentValue.title} GIF image`} width={460} height={460} unoptimized={true} />
               <h3 className="main-title">{currentValue.title}</h3>
             </li>
             <li key={nextValue.id} className="value-item next from-hidden-to-next">
-              <Image src={`/images/gallery/values/${nextValue.icon}`} alt={`${nextValue.title} and justice GIF image`} width={460} height={460} />
+              <Image src={`/images/gallery/values/${nextValue.icon}`} alt={`${nextValue.title} and justice GIF image`} width={460} height={460} unoptimized={true}/>
               <h3 className="main-title">{nextValue.title}</h3>
             </li>
           </ul>

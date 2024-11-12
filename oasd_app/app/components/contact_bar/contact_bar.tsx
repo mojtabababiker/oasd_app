@@ -17,10 +17,10 @@ export default function ContactBar() {
               </Link>
             </li>
             <li className="contact-item">
-              <Link className="contact-link" href="#">
+              <Link className="contact-link" href="tel://+256123456789">
                 {/* <i className="fa-solid fa-phone fa-sm"></i> */}
                 <SolidIcons icon="phone" className="icon" />
-                +256 741 230000
+                +256 123 465 789
               </Link>
             </li>
             <li className="contact-item">

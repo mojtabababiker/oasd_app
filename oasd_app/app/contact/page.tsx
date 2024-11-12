@@ -40,7 +40,7 @@ export default function ContactUs() {
             </div>
             <ul className="contact-us-list section">
               <li className="contact-us-item" onClick={(event) => { event.stopPropagation(); setActiveContact("map") }}>
-                <Image src={'/images/icons/map_icon.gif'} alt="Location Icon" width={260} height={260} />
+                <Image src={'/images/icons/map_icon.gif'} alt="Location Icon" width={260} height={260} unoptimized={true} />
                 <div className="info">
                   <h3 className={`sub-title ${activeContact === "map" && "scale_in"}`}>
                     <Link href={'#map'}>Uganda-Kampala-Nakawa , 2745 Tankhill Rd </Link>
@@ -48,7 +48,7 @@ export default function ContactUs() {
                 </div>
               </li>
               <li className="contact-us-item" onClick={(event) => { event.stopPropagation(); setActiveContact("email") }}>
-                <Image src={'/images/icons/mail_icon.gif'} alt="Email Icon" width={260} height={260} />
+                <Image src={'/images/icons/mail_icon.gif'} alt="Email Icon" width={260} height={260} unoptimized={true} />
                 <div className="info">
                   <h3 className={`sub-title ${activeContact === "email" && "scale_in"}`}>
                     <Link href={"mailto:hello@oasd.africa"}>
@@ -58,7 +58,7 @@ export default function ContactUs() {
                 </div>
               </li>
               <li className="contact-us-item" onClick={(event) => { event.stopPropagation(); setActiveContact("phone") }}>
-                <Image src={'/images/icons/phone_icon.gif'} alt="Cell Phone Icon" width={260} height={260} />
+                <Image src={'/images/icons/phone_icon.gif'} alt="Cell Phone Icon" width={260} height={260} unoptimized={true} />
                 <div className="info">
                   <h3 className={`sub-title ${activeContact === "phone" && "scale_in"}`}>
                     <Link href={"call:+256 741 230000"}>+256 741 230000</Link>
