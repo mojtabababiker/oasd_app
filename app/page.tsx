@@ -12,22 +12,22 @@ const programs = [
   {
     title: "Education",
     icon: "education.png",
-    link: "/posts/education",
+    link: "/posts?category=education",
   },
   {
-    title: "Health",
+    title: "Health Care",
     icon: "health.png",
-    link: "/posts/health",
+    link: "/posts?category=health",
   },
   {
-    title: "Culture",
+    title: "Cultures",
     icon: "culture.png",
-    link: "/posts/culture",
+    link: "/posts?category=culture",
   },
   {
     title: "Crisis",
     icon: "emergency.png",
-    link: "/posts/emergency",
+    link: "/posts?category=emergency",
   },
 ];
 
