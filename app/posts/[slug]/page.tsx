@@ -6,10 +6,9 @@ import {
   getFeaturedPosts,
 } from "@/app/utils/scripts/posts_api";
 import { notFound } from "next/navigation";
-import { FeaturedPostCard } from "@/app/components/cards/cards";
 import { Button } from "@/app/components/buttons/buttons";
-import { SolidIcons } from "@/app/components/icons/icons";
 import FeaturedPosts from "@/app/components/posts/FeaturedPosts";
+import FeaturedPostsSlider from "@/app/components/posts/FeaturedPostsSlider";
 
 export default async function PostPage({
   params,
@@ -56,6 +55,7 @@ export default async function PostPage({
       },
     ],
   };
+
   // console.log(params);
 
   return (
@@ -99,38 +99,7 @@ export default async function PostPage({
         </aside>
       </section>
       {/* featured post */}
-      <section className="container-fluid section featured-posts">
-        <h4 className="sub-title">Featured Posts</h4>
-        <h1 className="main-title">
-          Spotlight on Change: Our Featured Insights
-        </h1>
-
-        <div className=" section-md featured-posts-container">
-          <Button className="arrow-left">
-            <SolidIcons icon="arrow-right" className="icon" />
-          </Button>
-          <ul className="posts-menu featured-posts-menu">
-            {featuredPosts.map((post, index) => {
-              return (
-                <li key={index} className="featured-post-item">
-                  <FeaturedPostCard {...post} />
-                </li>
-              );
-            })}
-          </ul>
-          <Button className="arrow-right">
-            <SolidIcons icon="arrow-right" className="icon" />
-          </Button>
-          <div className="featured-post-arrow-sm">
-            <Button className="arrow-left-sm">
-              <SolidIcons icon="arrow-right" className="icon" />
-            </Button>
-            <Button className="arrow-right-sm">
-              <SolidIcons icon="arrow-right" className="icon" />
-            </Button>
-          </div>
-        </div>
-      </section>
+      <FeaturedPostsSlider featuredPosts={featuredPosts} />
     </>
   );
 }

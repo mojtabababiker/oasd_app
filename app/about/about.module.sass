@@ -360,3 +360,56 @@ main
         // left: 
         // top: 50%
         // transform: translateY(-50%)
+
+.recent-articles-container
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  margin: 0
+  margin-bottom: 4rem
+  padding: 0
+  padding-top: 4rem
+  background: $bg-end
+
+  .articles-warper
+    position: relative
+        // bottom: -40px
+    width: 100%
+    max-width: 1280px
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: space-between
+        // align-items: center
+        // gap: 2.222rem
+
+    .main-title
+      max-width: 460px
+
+      .card-container
+        position: relative
+        bottom: -4rem
+            // margin-bottom: rem
+
+        .posts-warper
+          display: flex
+          flex-wrap: wrap
+          justify-content: center
+          gap: 0.666rem
+          row-gap: 6rem
+          padding: 0
+
+        .post-item
+          list-style: none
+          padding: 0
+          margin: 0
+          opacity: 0
+          animation-duration: 1s
+
+          .card-container
+            opacity: 1
+
+    .card-container
+      opacity: 1

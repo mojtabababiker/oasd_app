@@ -60,7 +60,7 @@ export default function MissionSlider() {
           legislation, stakeholder empowerment, good governance, and responsive
           service delivery.
         </p>
-        <Button href="/join" className="">
+        <Button href="/jobs" className="">
           Join Us
         </Button>
       </div>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { InView } from "react-intersection-observer";
 import BreadCrumb from "../components/breadcrumb/breadcrumb";
+import { Button } from "../components/buttons/buttons";
 
 export default function Jobs() {
   const [breadcrumb] = useState({
@@ -26,6 +27,17 @@ export default function Jobs() {
           }
         >
           No jobs available at the moment. Please check back later.
+        </InView>
+        <InView
+          as="div"
+          className="w-full flex items-center justify-center"
+          onChange={(inView, entry) =>
+            inView && entry.target.classList.add("slide-bottom")
+          }
+        >
+          <Button href="/" className="outline-btn">
+            Back Home
+          </Button>
         </InView>
       </section>
     </main>

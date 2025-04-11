@@ -11,6 +11,16 @@
   align-items: center
   background-image: url('/images/header_bg.png')
 
+  .title-container
+    width: 100%
+    .sub-title
+      width: 100%
+      text: left
+
+    .main-title
+      width: 100%
+      max-width: 20ch
+
   .featured-posts-container
     position: relative
     display: flex
@@ -125,6 +135,7 @@
     flex-wrap: nowrap
     gap: 1.1rem
     overflow-x: scroll
+    scroll-behavior: smooth
 
     @media screen and ( max-width: 580px )
       padding-inline: 0rem
@@ -247,3 +258,35 @@
   .posts-warper
     position: relative
     top: -100px
+    margin: 0
+
+    .visible-post
+      list-style: none
+      position: relative
+      transition: all 0.3s ease-in-out
+      // opacity: 1
+      animation: hide 0.7 ease-in-out reverse
+
+      .card-container
+        opacity: 1
+      @media screen and ( max-width: 662px )
+        .card-container
+          max-width: 420px
+
+    .hidden-post
+      position: absolute
+      // opacity: 0
+      animation: hide 0.3s ease-in-out
+
+@keyframes hide
+  0%
+    opacity: 1
+    scale: 1
+    display: flex
+    border-radius: 1rem
+
+  100%
+    opacity: 0
+    scale: 0
+    border-radius: 100%
+    display: none

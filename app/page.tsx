@@ -38,7 +38,7 @@ const posts = [
     thumbnail: "/images/posts/post_1.jpg",
     summary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt facilis consequuntur quasi illo voluptatibus?",
-    link: "#",
+    link: "/posts/knitting-in-africa-history",
     lastUpdate: "22 Dec 2023",
   },
 
@@ -48,7 +48,7 @@ const posts = [
     thumbnail: "/images/posts/post_2.jpg",
     summary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt facilis consequuntur quasi illo voluptatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit",
-    link: "#",
+    link: "/posts/the-history-of-algebra",
     lastUpdate: "27 Dec 2023",
   },
 
@@ -58,17 +58,17 @@ const posts = [
     thumbnail: "/images/posts/post_3.jpg",
     summary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt facilis consequuntur quasi illo voluptatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit",
-    link: "#",
+    link: "war-diseases-and-how-to-over-come-it",
     lastUpdate: "27 Dec 2023",
   },
 
   {
     category: "Crisis",
-    title: "Water is Out On Sudan",
+    title: "Water is Out In Sudan",
     thumbnail: "/images/posts/post_4.jpg",
     summary:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt facilis consequuntur quasi illo voluptatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit",
-    link: "#",
+    link: "water-is-out-in-sudan",
     lastUpdate: "27 Dec 2023",
   },
 ];
@@ -97,10 +97,10 @@ export default function Home() {
             </h3>
             {/* actions button */}
             <div className="header-actions">
-              <Button href="/donate" className="solid-btn-primary">
+              <Button href="/jobs" className="solid-btn-primary">
                 Join the Movement
               </Button>
-              <Button href="/join" className="outline-btn">
+              <Button href="/about" className="outline-btn">
                 Learn More
               </Button>
             </div>
