@@ -103,3 +103,51 @@ export default async function PostPage({
     </>
   );
 }
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const slugTitle = slug
+    .split("-")
+    .map((word) => {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+  let description = `Read the post about ${slugTitle} on our blog.`;
+  let url = `/posts/default-post-og-image.jpg`;
+  try {
+    const post = await fetchPost(slug);
+    if (post && post.summary) {
+      description = post.summary;
+      if (post.thumbnail) {
+        url = post.thumbnail;
+      }
+    }
+  } catch (error) {
+    console.error("Error generating metadata:", error);
+    description = "Read the post on our blog.";
+  }
+  return {
+    title: `Post - ${slugTitle}`,
+    description,
+    openGraph: {
+      title: `Post - ${slugTitle}`,
+      description,
+      url: `/posts/${slug}`,
+      type: "article",
+      siteName: "OASD",
+      locale: "en_US",
+      images: [
+        {
+          url,
+          width: 1200,
+          height: 630,
+          alt: slugTitle,
+        },
+      ],
+    },
+  };
+}
